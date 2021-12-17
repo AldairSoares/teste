@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@100;300;400;700&display=swap');
 
 html{
     padding:0px;
@@ -6,6 +6,8 @@ html{
 }
 body{
     font-family: Roboto;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 /*-----Navigation---------*/
@@ -26,12 +28,23 @@ body{
     font-size: 30pt;
 }
 
+.dropdown-menu{
+    background-color: transparent !important;
+}
+.dropdown-item {
+    background-color: rgba(0,0,0, 0.15) !important;
+    color: #FFF !important;
+}
+
+
+
+
 .navbar-nav li{
     padding:.3rem;
     color: white;
 }
 
-.trocar:hover{
+.trocar:hover, .dropdown-item:hover, .dropdown-toggle:hover{
     color: #00FF00!important;
 }
 
@@ -71,7 +84,7 @@ body{
 
 .caption h1:hover{
     transform:scale(1.2);
-    transition: 1.8s;
+    transition: 1.8s ease-in-out;
     color:rgba(0,255,127,0.4)
 }
 
@@ -85,14 +98,13 @@ body{
 /*-------------Sobre---------------*/
 
 .bg-sobre{
-    background: rgb(15,28,9);
-    background: linear-gradient(180deg, rgba(15,28,9,1) 32%, rgba(15,33,29,1) 69%, rgba(62,90,84,1) 96%);
+    background: #10290e;
 }
 
 .transparent{
     background-color: rgba(255,255,255,0.15);
     border-radius:5px;
-    color:rgb(218,165,32);
+    color:whitesmoke;
     font-family: Roboto;
 
 }
@@ -128,6 +140,7 @@ body{
 
 #tecnologias{
     font-family: Roboto;
+    /* max-width: 100vw */
 }
 
 .tech{
@@ -201,8 +214,14 @@ body{
    
 }
 
+
 .equipeh1{
     color:whitesmoke;
+    margin-top: 5rem;
+    font-size: 3rem;
+    letter-spacing: 5px;
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
 }
 
 
@@ -225,7 +244,7 @@ body{
 /*-----Footer---------*/
 
 footer{
-    background-color: black;
+    /* background-color: black; */
     color: white;
 }
 
@@ -251,31 +270,32 @@ footer i{
     border-radius: 50%;
 }
 .cards-container{
-    width: 100%;
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(5, 4fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
 }
 .card:nth-child(1) .front-card{
-    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5)), url("/assets/img/aldair.jpg") center/cover no-repeat;
+    background: url("/assets/img/aldair.jpg") center/cover no-repeat;
 }
 .card:nth-child(2) .front-card{
-    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5)), url("/assets/img/arthur.jpeg") center/cover no-repeat;
+    background: url("/assets/img/arthur.jpeg") center/cover no-repeat;
 }
 .card:nth-child(3) .front-card{
-    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5)), url("/assets/img/") center/cover no-repeat;
+    background: url("/assets/img/brenda.jpeg") center/cover no-repeat;
 }
 .card:nth-child(4) .front-card{
-    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5)), url("/assets/img/edu.jpeg") center/cover no-repeat;
+    background:  url("/assets/img/edu.jpeg") center/cover no-repeat;
 }
 
 .card:nth-child(5) .front-card{
-    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.5)), url("/assets/img/malu.jpg") center/cover no-repeat;
+    background: url("/assets/img/malu.jpg") center/cover no-repeat;
 }
 
 .card{
-    height: 300px;
+    height: 450px;
     perspective: 1000px;
+    width: 100%;
 }
 .card-wrapper{
     position: relative;
@@ -300,7 +320,8 @@ footer i{
 .rear-card{
     text-align: center;
     transform: rotateY(180deg);
-    background: #00cec1;
+    background:#2ECC71;
+    ;
     color: #fff;
     padding: 20px;
 }
@@ -322,4 +343,10 @@ footer i{
 .about-info div h2{
     font-size: 19px;
     padding: 10px 0 2px;
+}
+
+
+/* invensão do thiago */
+.borda {
+    text-shadow: 2px 0 0 #141212, -2px 0 0 #141212, 0 2px 0 #141212, 0 -2px 0 #141212, 1px 1px #141212, -1px -1px 0 #141212, 1px -1px 0 #141212, -1px 1px 0 #141212;
 }
