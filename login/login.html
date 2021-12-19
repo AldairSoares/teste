@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<htmli lang="pt-br">
+
+    <head>
+        <link rel="stylesheet" href="login.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width" , initial-scale=1.0>
+        <title>Entre</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2>Entre</h2>
+            <form action="login.html" method="post">
+                <div class="input-field">
+                    <input [(ngModel)]='userLogin.usuario' class="form-control" type="text" name="usuario" id="usuario"
+                        placeholder="Seu usuário aqui">
+                    <label for="nome">E-mail</label>
+                </div>
+                <div class="input-field">
+                    <input [(ngModel)]='userLogin.senha' class="form-control" type="password" name="senha" id="senha"
+                        placeholder="Digite a senha">
+                    <label for="senha">Senha</label>
+                </div>
+                <div class="centro">
+                    <button type="submit" class="btn btn-success" (click)='entrar()'>Entrar</button>
+                </div>
+
+            </form>
+            <div class="links-uteis">
+                <a href="">
+                    <p>Esqueceu sua senha?</p>
+                </a>
+                <p class="text-center">
+                    <a routerLink="/cadastro">Cadastre-se</a>
+                </p>
+            </div>
+        </div>
+    </body>
+</htmli>
