@@ -82,22 +82,22 @@ button{
 }
 
 button:hover{
-    background: #26a96a;
+    background: #80954f;
 }
 
 div a{
     text-decoration: none;
-    color: white;
+    color: #80954f;
     transition: .25s ease-in-out;
 }
 
 div a:hover{
-    color:#26a96a;
+    color:#80954f;
 }
 
 input:not(:placeholder-shown){
-    box-shadow: 0 1px 0 0 #26a96a;
-    border-bottom: #26a96a 1px solid;
+    box-shadow: 0 1px 0 0 #80954f;
+    border-bottom: #80954f 1px solid;
 }
 
 input:not(:placeholder-shown) + label{
