@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<htmli lang="pt-br">
+
+    <head>
+        <link rel="stylesheet" href="cadastro.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width" , initial-scale=1.0>
+        <title>Cadastro</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2>Cadastro</h2>
+            <form action="cadastro.html" method="post">
+                <div class="input-field">
+                    <input [(ngModel)]="usuario.nome" class="form-control" type="text" name="nome" id="nome"
+                        placeholder="Digite seu nome aqui">
+                    <label for="nome">Nome</label>
+                </div>
+                <div class="input-field">
+                    <input [(ngModel)]="usuario.usuario" class="form-control" type="text" name="usuario" id="usuario"
+                        placeholder="Digite seu e-mail aqui">
+                    <label for="nome">E-mail</label>
+                </div>
+                <div class="input-field">
+                    <input [(ngModel)]="usuario.foto" class="form-control" type="text" name="foto" id="foto"
+                        placeholder="Adicione o link da sua foto aqui">
+                    <label for="nome">Foto</label>
+                </div>
+                <div class="input-field">
+                    <input (input)="confirmSenha($event)" class="form-control" type="password" name="senha" id="senha"
+                        placeholder="Digite sua senha">
+                    <label for="senha">Senha</label>
+                </div>
+                <div class="input-field">
+                    <input [(ngModel)]="usuario.senha" class="form-control" type="password" name="senha" id="senha"
+                        placeholder="Digite sua senha">
+                    <label for="senha">Confirmar Senha</label>
+                </div>
+
+
+                <div class="center d-flex justify-content-center">
+                    <button submit="submit" routerLink="/logar" class="btn btn-danger mr-2">
+                        Cancelar</button>
+                    <button submit="submit" class="btn btn-success" (click)="cadastrar()">
+                        Cadastrar
+                    </button>
+                </div>
+        </div>
+
+        </form>
+
+        </div>
+    </body>
+</htmli>

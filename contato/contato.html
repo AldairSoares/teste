@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<htmli lang="pt-br">
+
+    <head>
+        <link rel="stylesheet" href="contato.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width" , initial-scale=1.0>
+        <title>Contato</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2>Contato</h2>
+            <form action="https://formsubmit.co/manguetechpe@gmail.com" method="post">
+                <div class="input-field">
+                    <input [(ngModel)]="usuario.nome" class="form-control" type="text" name="nome" id="nome"
+                        placeholder="Digite seu nome aqui">
+                    <label for="nome">Nome</label>
+                </div>
+                <div class="input-field">
+                    <input [(ngModel)]="usuario.email" class="form-control" type="email" name="email" id="email"
+                        placeholder="Digite seu email aqui">
+                    <label for="nome">E-mail</label>
+                </div>
+
+                <div class="input-caixa">
+                    <label for="assunto">Assunto</label> <br>
+                </div>
+                <textarea name="assunto" id="assunto" cols="50" rows="6" onkeyup="validaAssunto()"></textarea>
+                <div id='txtAssunto'>
+                </div>
+
+
+                <div class="centro">
+                    <button submit="submit" routerLink="/logar" class="btn btn-danger mr-2">
+                        Enviar</button>
+
+                </div>
+        </div>
+
+        </form>
+
+    </body>
+</htmli>
